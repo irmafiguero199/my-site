@@ -1,55 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Health & Wellness | Amsler Family Foundation</title>
-  <meta name="description" content="Health and wellness programs by Amsler Family Foundation.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amsler Family Foundation | Non-Profit Organization</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Amsler Family Foundation is a non-profit organization dedicated to community development, health, education, and social inclusion through sports and charitable initiatives.">
+  <meta name="keywords" content="Nonprofit, Charity, Foundation, Community, Sports, Education">
+  <meta name="author" content="Amsler Family Foundation">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background:#f7f8fc;
-      margin:0;
-      color:#333;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f7f8fc;
+      color: #333;
+      line-height: 1.7;
     }
+
+    /* NAV */
+    nav {
+      background: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav strong {
+      color: #6c63ff;
+      font-size: 18px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #6c63ff;
+    }
+
+    /* HERO */
     header {
-      background:#6c63ff;
-      color:white;
-      padding:70px 20px;
-      text-align:center;
+      background: linear-gradient(135deg, #6c63ff, #5148d6);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
     }
+
+    header h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #6c63ff;
+      padding: 15px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     section {
-      max-width:900px;
-      margin:auto;
-      padding:60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
     }
-    a {
-      color:#6c63ff;
-      text-decoration:none;
-      font-weight:bold;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 34px;
+      color: #222;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #6c63ff;
+    }
+
+    /* DONATE */
+    .donate {
+      background: #6c63ff;
+      color: white;
+      text-align: center;
+      border-radius: 20px;
+      padding: 70px 30px;
+    }
+
+    .donate p {
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f1f1f;
+      color: #ccc;
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 6px 0;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Health & Wellness</h1>
-  <p>Supporting physical and mental well-being</p>
-</header>
+  <!-- NAV -->
+  <nav>
+    <strong>Amsler Family Foundation</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#contact">Contact</a>
+      <a href="#donate">Donate</a>
+    </div>
+  </nav>
 
-<section>
-  <p>
-    The Amsler Family Foundation promotes healthy lifestyles through
-    sports programs, wellness initiatives, and community-based activities.
-  </p>
+  <!-- HERO -->
+  <header>
+    <h1>Amsler Family Foundation</h1>
+    <p>
+      A registered non-profit organization committed to strengthening communities
+      through sports, education, and social action.
+    </p>
+    <a class="btn" href="#donate">Support Our Mission</a>
+  </header>
 
-  <p>
-    Our goal is to ensure access to health-focused opportunities
-    for individuals and families, regardless of background.
-  </p>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:900px; margin:auto;">
+      The Amsler Family Foundation is a United States registered non-profit organization
+      focused on creating long-term positive impact in local communities. We believe
+      that sports, education, and collective engagement are powerful tools for social change.
+    </p>
+  </section>
 
-  <br>
-  <a href="index.html">← Back to Home</a>
-</section>
+  <!-- MISSION -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Health & Wellness</h3>
+        <p>Promoting physical and mental well-being through accessible programs.</p>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <p>Supporting youth development and educational opportunities.</p>
+      </div>
+      <div class="card">
+        <h3>Inclusion</h3>
+        <p>Encouraging equality, respect, and community participation.</p>
+      </div>
+      <div class="card">
+        <h3>Integrity</h3>
+        <p>Operating with transparency, responsibility, and accountability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section id="donate">
+    <div class="donate">
+      <h2>Donate</h2>
+      <p>
+        Your support helps us fund community programs, educational initiatives,
+        and charitable actions that improve lives.
+      </p>
+      <p><strong>Donation options coming soon.</strong></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Email</h3>
+        <p>contact@amsler-family-foundation.sbs</p>
+      </div>
+      <div class="card">
+        <h3>Address</h3>
+        <p>
+          7000 S Sylvan Lake Dr<br>
+          Sanford, FL 32771-9050<br>
+          United States
+        </p>
+      </div>
+      <div class="card">
+        <h3>EIN</h3>
+        <p>81-0854933</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Amsler Family Foundation</p>
+    <p>Registered Non-Profit Organization (EIN 81-0854933)</p>
+  </footer>
 
 </body>
 </html>
