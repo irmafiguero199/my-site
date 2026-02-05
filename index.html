@@ -11,11 +11,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f7f8fc;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 header {
-  background: #5b5ff0;
+  background: linear-gradient(135deg,#5b5ff0,#7b80ff);
   color: white;
   padding: 90px 20px;
   text-align: center;
@@ -23,13 +23,7 @@ header {
 
 header h1 {
   font-size: 42px;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: auto;
+  margin-bottom: 15px;
 }
 
 section {
@@ -46,7 +40,7 @@ h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
 
@@ -55,12 +49,11 @@ h2 {
   padding: 30px;
   border-radius: 14px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  text-align: center;
 }
 
 .card h3 {
   color: #5b5ff0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 footer {
@@ -77,123 +70,176 @@ footer {
 
 <!-- HERO -->
 <header>
+  <div>
+    <svg width="70" height="70" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="#ffffff"/>
+      <text x="50%" y="55%" text-anchor="middle" fill="#5b5ff0" font-size="28" font-weight="bold">AFF</text>
+    </svg>
+  </div>
   <h1>Amsler Family Foundation</h1>
   <p>
-    This is the official website of Amsler Family Foundation, a registered nonprofit organization
-    dedicated to strengthening communities through sports, education, and social action.
+    The official website of Amsler Family Foundation, a registered nonprofit organization
+    dedicated to strengthening communities through education, health initiatives,
+    inclusion, and charitable actions.
   </p>
 </header>
 
 <!-- ABOUT -->
 <section>
-  <h2>About Us</h2>
-  <p style="text-align:center; max-width:850px; margin:auto;">
-    Amsler Family Foundation is a United States registered nonprofit organization.
-    We work to improve quality of life by supporting community programs focused on
-    health, education, inclusion, and charitable initiatives.
-  </p>
+<h2>About Us</h2>
+<p style="max-width:900px;margin:auto;text-align:center;">
+Amsler Family Foundation is a United States registered nonprofit organization committed
+to serving communities through programs that promote health, education, inclusion,
+and social responsibility. Our foundation works with individuals, families, and
+community partners to create positive and lasting social impact.
+</p>
 </section>
 
 <!-- MISSION -->
 <section>
-  <h2>Our Mission</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Health & Wellness</h3>
-      <p>Promoting physical and mental well-being through accessible community programs.</p>
-    </div>
-    <div class="card">
-      <h3>Education</h3>
-      <p>Supporting youth development and educational opportunities.</p>
-    </div>
-    <div class="card">
-      <h3>Inclusion</h3>
-      <p>Encouraging equality, respect, and community participation.</p>
-    </div>
-    <div class="card">
-      <h3>Integrity</h3>
-      <p>Operating with transparency, responsibility, and accountability.</p>
-    </div>
-  </div>
+<h2>Our Mission</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Health & Wellness</h3>
+<p>
+We promote physical and mental well-being through accessible health education,
+community wellness programs, and preventive care initiatives aimed at improving
+quality of life.
+</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<p>
+We support educational development by providing learning resources, mentorship,
+and youth empowerment programs designed to encourage long-term academic and
+professional success.
+</p>
+</div>
+
+<div class="card">
+<h3>Inclusion</h3>
+<p>
+We foster inclusive communities by promoting equality, diversity, and participation
+across all social and economic backgrounds.
+</p>
+</div>
+
+<div class="card">
+<h3>Integrity</h3>
+<p>
+We operate with transparency, accountability, and ethical responsibility to ensure
+that all resources are used exclusively for nonprofit and charitable purposes.
+</p>
+</div>
+
+</div>
 </section>
 
 <!-- ACTIVITIES -->
 <section>
-  <h2>Our Activities</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Sports Programs</h3>
-      <p>Community sports and wellness initiatives.</p>
-    </div>
-    <div class="card">
-      <h3>Educational Support</h3>
-      <p>Programs focused on learning and youth empowerment.</p>
-    </div>
-    <div class="card">
-      <h3>Community Outreach</h3>
-      <p>Local events and social assistance programs.</p>
-    </div>
-    <div class="card">
-      <h3>Charitable Actions</h3>
-      <p>Helping individuals and families in need.</p>
-    </div>
-  </div>
+<h2>Our Activities</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Sports Programs</h3>
+<p>
+Community-based sports initiatives that promote teamwork, discipline, physical
+activity, and healthy lifestyles.
+</p>
+</div>
+
+<div class="card">
+<h3>Educational Support</h3>
+<p>
+Tutoring assistance, educational materials, and youth development programs designed
+to support academic growth.
+</p>
+</div>
+
+<div class="card">
+<h3>Community Outreach</h3>
+<p>
+Local outreach programs that provide social assistance, awareness campaigns, and
+volunteer-led initiatives.
+</p>
+</div>
+
+<div class="card">
+<h3>Charitable Actions</h3>
+<p>
+Humanitarian and charitable support for individuals and families facing hardship or
+financial challenges.
+</p>
+</div>
+
+</div>
 </section>
 
-<!-- DONATE -->
+<!-- DONATIONS -->
 <section>
-  <h2>Donations</h2>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    Donations support our nonprofit mission and help fund charitable and community programs.
-    Online donation options will be available soon.
-  </p>
+<h2>Donations</h2>
+<p style="max-width:850px;margin:auto;text-align:center;">
+Donations help support our nonprofit mission and allow us to continue providing
+community programs and charitable assistance. Donation options will be available
+through secure and transparent channels.
+</p>
+</section>
+
+<!-- PRIVACY POLICY -->
+<section>
+<h2>Privacy Policy</h2>
+<p>
+Amsler Family Foundation respects your privacy. This website does not collect personal
+information unless voluntarily provided through contact communications. Any
+information shared is used solely for nonprofit communication purposes and is never
+sold or shared with third parties.
+</p>
+</section>
+
+<!-- TERMS -->
+<section>
+<h2>Terms & Conditions</h2>
+<p>
+By using this website, you agree that all content is provided for informational
+purposes only. Amsler Family Foundation is not responsible for misuse of information.
+All content is protected and intended for nonprofit and educational use.
+</p>
 </section>
 
 <!-- CONTACT -->
 <section>
-  <h2>Contact Us</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Email</h3>
-      <p>contact@amsler-family-foundation.sbs</p>
-    </div>
-    <div class="card">
-      <h3>Address</h3>
-      <p>
-        7000 S Sylvan Lake Dr<br>
-        Sanford, FL 32771-9050<br>
-        United States
-      </p>
-    </div>
-    <div class="card">
-      <h3>EIN</h3>
-      <p>81-0854933</p>
-    </div>
-  </div>
-</section>
+<h2>Contact Us</h2>
+<div class="cards">
 
-<!-- LEGAL -->
-<section>
-  <h2>Legal & Transparency</h2>
-  <p style="max-width:900px; margin:auto; text-align:center;">
-    Amsler Family Foundation is a registered nonprofit organization in the United States.
-    This website (amsler-family-foundation.sbs) is the official website of the organization
-    and is used for informational and charitable purposes only.
-  </p>
+<div class="card">
+<h3>Email</h3>
+<p>contact@amsler-family-foundation.sbs</p>
+</div>
 
-  <ul style="max-width:600px; margin:30px auto; line-height:1.8;">
-    <li><strong>Legal Name:</strong> Amsler Family Foundation</li>
-    <li><strong>Organization Type:</strong> Nonprofit Organization</li>
-    <li><strong>EIN:</strong> 81-0854933</li>
-    <li><strong>Country:</strong> United States</li>
-  </ul>
+<div class="card">
+<h3>Address</h3>
+<p>
+7000 S Sylvan Lake Dr<br>
+Sanford, FL 32771-9050<br>
+United States
+</p>
+</div>
+
+<div class="card">
+<h3>EIN</h3>
+<p>81-0854933</p>
+</div>
+
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Amsler Family Foundation</p>
-  <p>Registered Nonprofit Organization – EIN 81-0854933</p>
-  <p>Official website: amsler-family-foundation.sbs</p>
+<p>© 2026 Amsler Family Foundation</p>
+<p>Registered Nonprofit Organization – EIN 81-0854933</p>
+<p>Official website: amsler-family-foundation.sbs</p>
 </footer>
 
 </body>
