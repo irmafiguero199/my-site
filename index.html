@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amsler Family Foundation | Official Nonprofit Organization</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Amsler Family Foundation | Official Global Nonprofit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #4f46e5;
-            --primary-dark: #3730a3;
+            --primary-dark: #312e81;
             --accent: #f59e0b;
-            --bg-light: #f8fafc;
+            --success: #10b981;
+            --bg-light: #f3f4f6;
             --white: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
+            --text-main: #111827;
+            --text-muted: #4b5563;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
@@ -30,61 +31,68 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
 
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 25px; font-weight: 500; transition: 0.3s; }
+        .logo { font-weight: 800; font-size: 1.6rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 20px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Hero Section with Image Overlay */
+        /* Hero Section */
         header {
-            background: linear-gradient(rgba(79, 70, 229, 0.85), rgba(55, 48, 163, 0.85)), 
-                        url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), 
+                        url('https://images.pexels.com/photos/45842/human-hand-hands-social-45842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: cover;
             background-position: center;
             color: var(--white);
-            padding: 160px 5% 120px;
+            padding: 200px 5% 150px;
             text-align: center;
         }
 
-        header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 25px; font-weight: 800; }
-        header p { font-size: 1.3rem; max-width: 850px; margin: 0 auto 40px; opacity: 0.95; }
+        header h1 { font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 30px; line-height: 1.1; font-weight: 800; }
+        header p { font-size: 1.4rem; max-width: 900px; margin: 0 auto 50px; opacity: 0.9; }
 
         .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn { padding: 16px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; }
-        .btn-accent { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); }
-        .btn-white { background: white; color: var(--primary); }
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+        .btn { padding: 18px 45px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.4s; font-size: 1.1rem; }
+        .btn-accent { background: var(--accent); color: white; box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.4); }
+        .btn-outline { border: 2px solid white; color: white; }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); }
 
-        /* Sections */
-        section { padding: 80px 5%; max-width: 1200px; margin: auto; }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 2.8rem; color: var(--primary); margin-bottom: 15px; }
-        
-        .content-with-img { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 60px; }
-        .content-with-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-
-        /* Extensive Mission Text */
-        .mission-text p { margin-bottom: 20px; font-size: 1.1rem; color: var(--text-muted); text-align: justify; }
+        /* Content Sections */
+        section { padding: 100px 5%; max-width: 1300px; margin: auto; }
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-header h2 { font-size: 3rem; color: var(--primary); margin-bottom: 20px; font-weight: 800; }
+        .section-header p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: auto; }
 
         /* Grid Layouts */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: 0.3s; }
-        .card:hover { border-top: 4px solid var(--accent); transform: translateY(-5px); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
-        /* Newsletter Section */
-        .newsletter { background: var(--primary); color: white; border-radius: 30px; padding: 60px; text-align: center; margin-top: 50px; }
-        .newsletter input { padding: 15px; border-radius: 10px; border: none; width: 300px; max-width: 100%; margin-bottom: 15px; }
+        .card { background: white; padding: 50px; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; border: 1px solid #eee; }
+        .card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary-dark); }
+
+        /* History & Mission Detail */
+        .detail-box { background: white; border-radius: 40px; padding: 60px; margin-bottom: 40px; border-left: 10px solid var(--primary); }
+        .detail-box p { margin-bottom: 25px; font-size: 1.15rem; color: var(--text-muted); text-align: justify; }
+
+        /* FAQ Section */
+        .faq-item { background: #fff; margin-bottom: 15px; padding: 25px; border-radius: 15px; cursor: pointer; border: 1px solid #e5e7eb; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 10px; }
+
+        /* Volunteer Section Banner */
+        .cta-banner { background: var(--primary-dark); color: white; padding: 80px; border-radius: 40px; text-align: center; margin: 100px 0; }
 
         /* Footer */
-        footer { background: #0f172a; color: #94a3b8; padding: 80px 5% 40px; text-align: center; }
-        .footer-logo { color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; }
-        .footer-info { margin-bottom: 30px; font-size: 0.9rem; }
+        footer { background: #0f172a; color: #94a3b8; padding: 100px 5% 50px; text-align: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; text-align: left; margin-bottom: 50px; }
+        .footer-col h4 { color: white; margin-bottom: 25px; font-size: 1.2rem; }
+        .footer-col p, .footer-col li { font-size: 0.95rem; margin-bottom: 10px; list-style: none; }
 
-        @media (max-width: 768px) {
-            .content-with-img { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+        @media (max-width: 900px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            header h1 { font-size: 3rem; }
+            .section-header h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -92,125 +100,182 @@
 
     <nav>
         <a href="#" class="logo">
-            <div style="background:var(--primary); color:white; width:40px; height:40px; border-radius:8px; display:grid; place-items:center;">AFF</div>
+            <div style="background:var(--primary); color:white; width:45px; height:45px; border-radius:12px; display:grid; place-items:center;">AFF</div>
             AMSLER FOUNDATION
         </a>
         <div class="nav-links">
-            <a href="#mission">Our Mission</a>
-            <a href="#impact">Impact</a>
-            <a href="#volunteer">Volunteer</a>
-            <a href="#legal">Legal</a>
+            <a href="#history">Our Journey</a>
+            <a href="#values">Core Values</a>
+            <a href="#programs">Global Programs</a>
+            <a href="#faq">FAQ</a>
+            <a href="#legal">Transparency</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header>
-        <h1>Kindness in Action, Hope for the Future</h1>
-        <p>Amsler Family Foundation is more than just a name. We are a community of volunteers and donors dedicated to breaking the cycle of poverty through sustainable education and health initiatives.</p>
+        <h1>A Legacy of Compassion and Global Service</h1>
+        <p>Amsler Family Foundation is a non-profit organization dedicated to creating sustainable pathways out of poverty through education, health innovation, and community leadership development.</p>
         <div class="btn-group">
-            <a href="#contact" class="btn btn-accent">Support Our Cause</a>
-            <a href="#mission" class="btn btn-white">Learn More</a>
+            <a href="#contact" class="btn btn-accent">Partner With Us</a>
+            <a href="#programs" class="btn btn-outline">Explore Programs</a>
         </div>
     </header>
 
-    <section id="mission">
-        <div class="content-with-img">
-            <div class="mission-text">
-                <h2 style="color:var(--primary); margin-bottom: 20px; font-size: 2.5rem;">Our Comprehensive Mission</h2>
-                <p>At Amsler Family Foundation, we believe that true change starts at the grassroots level. Our mission is built on the philosophy that every individual, regardless of their background, deserves the opportunity to lead a healthy, educated, and dignified life.</p>
-                <p>Over the past years, we have identified three critical gaps in community development: lack of mentorship for youth, inaccessible preventive healthcare, and the digital divide. Our programs are specifically designed to address these challenges head-on.</p>
-                <p>We don't just provide temporary aid; we build infrastructure. Whether it's setting up digital learning centers or hosting monthly wellness workshops, our goal is to empower people with the skills and health they need to become self-sufficient. We are committed to transparency, ensuring that every dollar spent is a step toward a stronger community.</p>
+    <section id="history">
+        <div class="grid-2">
+            <div>
+                <img src="https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=600" style="width:100%; border-radius:30px;" alt="Founding Story">
             </div>
             <div>
-                <img src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Helping hand">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;">Our Founding Journey</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px;">Founded on the principles of empathy and strategic giving, the Amsler Family Foundation began as a small family initiative in Florida. We realized that local community challenges—such as the education gap and healthcare accessibility—required a more structured and transparent approach to philanthropy.</p>
+                <p style="font-size: 1.1rem; color: var(--text-muted);">Today, we have grown into a registered 501(c)(3) nonprofit, managing diverse projects that impact hundreds of families. Our history is rooted in the belief that when you empower a family, you strengthen a neighborhood, and eventually, you change a nation.</p>
             </div>
         </div>
     </section>
 
-    <section id="impact" style="background: white; max-width: 100%;">
-        <div style="max-width: 1200px; margin: auto; padding: 0 5%;">
-            <div class="section-title">
-                <h2>Our Strategic Pillars</h2>
-                <p>We follow a data-driven approach to ensure our charitable actions have the maximum possible impact.</p>
+    <section id="values" style="background: white; max-width: 100%;">
+        <div style="max-width: 1300px; margin: auto; padding: 0 5%;">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>These principles guide every decision we make, from financial management to field operations.</p>
             </div>
-            <div class="grid">
+            <div class="grid-3">
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/1739842/pexels-photo-1739842.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:20px;">
-                    <h3>Educational Mentorship</h3>
-                    <p>We provide long-term mentorship for students, connecting them with professionals who guide their academic and career choices. We believe a book can change a life, but a mentor can change a destiny.</p>
+                    <h3>Radical Transparency</h3>
+                    <p>We provide full visibility into our financial records and project outcomes. Trust is the foundation of our work.</p>
                 </div>
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:20px;">
-                    <h3>Wellness & Prevention</h3>
-                    <p>Our healthcare initiative focuses on preventive care. By educating families on nutrition, mental health, and regular screenings, we reduce the long-term burden of disease in our community.</p>
+                    <h3>Sustainable Impact</h3>
+                    <p>We don't believe in "quick fixes." Our programs are designed to be self-sustaining for decades to come.</p>
                 </div>
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:20px;">
-                    <h3>Community Resilience</h3>
-                    <p>We support local leaders and grassroots organizations by providing the training and resources they need to manage local challenges effectively and inclusively.</p>
+                    <h3>Equality & Dignity</h3>
+                    <p>Every individual we serve is treated with the utmost respect, regardless of their background or status.</p>
+                </div>
+                <div class="card">
+                    <h3>Innovation</h3>
+                    <p>We use modern technology and data analysis to solve age-old community problems more efficiently.</p>
+                </div>
+                <div class="card">
+                    <h3>Integrity</h3>
+                    <p>Ethical responsibility is at the heart of our mission. We hold ourselves to the highest moral standards.</p>
+                </div>
+                <div class="card">
+                    <h3>Global Collaboration</h3>
+                    <p>We work with international partners to share knowledge and scale our successful community models.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="volunteer">
-        <div class="newsletter">
-            <h2 style="color:white; margin-bottom:20px;">Join the Amsler Family Today</h2>
-            <p style="margin-bottom: 30px; opacity:0.9;">Want to stay updated on our activities or join our volunteer network? Enter your email below.</p>
-            <input type="email" placeholder="Your Email Address">
-            <br>
-            <a href="#contact" class="btn btn-accent" style="display:inline-block;">Register as Volunteer</a>
+    <section id="programs">
+        <div class="section-header">
+            <h2>Our Global Impact Programs</h2>
+            <p>Our multifaceted approach ensures that we address the root causes of community instability.</p>
+        </div>
+        
+        <div class="detail-box">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">1. The Education and Mentorship Initiative</h3>
+            <p>Education is the most powerful weapon which you can use to change the world. Our mentorship program connects students in Sanford, FL, and beyond with professional mentors. We provide comprehensive scholarships that cover tuition, books, and digital tools. Furthermore, we host "Career Discovery" workshops where youth can learn about emerging industries like technology, sustainable agriculture, and healthcare.</p>
+            <p>We have successfully established three digital learning hubs that provide free high-speed internet and computer access to students who lack these resources at home, effectively bridging the digital divide.</p>
+        </div>
+
+        <div class="detail-box">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">2. Community Health and Wellness Outreach</h3>
+            <p>A healthy community is a productive community. Our health initiatives focus on preventive medicine and mental health awareness. We organize monthly mobile clinics that provide free health screenings, vaccinations, and nutritional counseling. In partnership with local health professionals, we offer seminars on stress management, chronic disease prevention, and child maternal health.</p>
+            <p>By focusing on early detection and healthy lifestyle choices, we have seen a significant decrease in preventable emergency room visits in the communities we serve.</p>
+        </div>
+
+        <div class="detail-box">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">3. Economic Empowerment and Inclusion</h3>
+            <p>We empower local entrepreneurs by providing micro-grants and financial literacy training. Our inclusion program ensures that marginalized groups—including veterans and the elderly—have access to community resources and social assistance. We believe that economic stability is a key component of social peace.</p>
         </div>
     </section>
+
+    <section id="faq" style="background: #f9fafb; max-width: 100%;">
+        <div style="max-width: 900px; margin: auto; padding: 0 5%;">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-item">
+                <h4>Is the Amsler Family Foundation a registered nonprofit?</h4>
+                <p>Yes, we are a legally registered 501(c)(3) nonprofit organization in the United States. All donations are tax-deductible.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How can I apply for a scholarship or grant?</h4>
+                <p>Applications are reviewed quarterly. You can reach out to our team via the contact form to receive the current application guidelines.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Where does my donation go?</h4>
+                <p>90% of all contributions go directly into our field programs. The remaining 10% is used for essential administrative costs to maintain transparency and reporting.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-banner">
+        <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to Make a Difference?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Join our global network of volunteers and change-makers today.</p>
+        <a href="#contact" class="btn btn-accent">Volunteer Now</a>
+    </div>
 
     <section id="legal">
-        <div class="section-title">
-            <h2>Legal Framework & Privacy</h2>
+        <div class="section-header">
+            <h2>Transparency & Compliance</h2>
         </div>
-        <div class="grid">
-            <div class="card" style="border-top: 2px solid #ddd;">
-                <h4>Privacy Policy</h4>
-                <p style="font-size:0.9rem; color:var(--text-muted); margin-top:10px;">Amsler Family Foundation (AFF) respects your data. We only collect information voluntarily provided via contact forms or email for communication regarding our nonprofit activities. Your data is never sold or traded.</p>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Privacy Policy</h3>
+                <p style="font-size: 0.9rem;">The Amsler Family Foundation (AFF) is committed to protecting your personal information. We do not sell, trade, or rent user data. Any information collected is strictly used for communication and donation processing. We utilize secure encryption to protect all digital interactions.</p>
             </div>
-            <div class="card" style="border-top: 2px solid #ddd;">
-                <h4>Terms of Service</h4>
-                <p style="font-size:0.9rem; color:var(--text-muted); margin-top:10px;">By browsing this site, you agree to our terms. All content is for educational and informational purposes. AFF is a registered 501(c)(3) organization with EIN 81-0854933.</p>
+            <div class="card">
+                <h3>Terms of Service</h3>
+                <p style="font-size: 0.9rem;">By accessing our official website, you agree to comply with our ethical standards. All content is owned by AFF and is intended for informational and charitable use. Unauthorized use of our logo or materials is strictly prohibited.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <div class="section-title">
-            <h2>Contact Our Team</h2>
-            <p>We are based in Florida, USA, and operate internationally.</p>
-        </div>
-        <div class="grid">
-            <div style="padding:20px;">
-                <h3 style="margin-bottom:15px; color:var(--primary);">Headquarters</h3>
-                <p>7000 S Sylvan Lake Dr<br>Sanford, FL 32771-9050<br>United States</p>
-                <p style="margin-top:20px;"><strong>Email:</strong> contact@amsler-family-foundation.sbs</p>
-                <p><strong>EIN:</strong> 81-0854933</p>
+        <div class="grid-2">
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Get in Touch</h2>
+                <p style="margin-bottom: 20px;"><strong>📍 Headquarters:</strong> 7000 S Sylvan Lake Dr, Sanford, FL 32771-9050, USA</p>
+                <p style="margin-bottom: 20px;"><strong>📧 Official Email:</strong> contact@amsler-family-foundation.sbs</p>
+                <p style="margin-bottom: 20px;"><strong>🆔 Tax ID (EIN):</strong> 81-0854933</p>
+                <p><strong>📞 Phone Support:</strong> Monday - Friday, 9:00 AM - 5:00 PM EST</p>
             </div>
-            <div style="padding:20px;">
-                <h3 style="margin-bottom:15px; color:var(--primary);">Hours of Operation</h3>
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 2:00 PM</p>
-                <p>Sunday: Closed</p>
+            <div style="background: white; padding: 40px; border-radius: 30px;">
+                <h4 style="margin-bottom: 20px; color: var(--primary);">Contact Form</h4>
+                <p style="color: var(--text-muted);">Please send us your inquiry, and our board of directors will respond within 48 hours.</p>
+                <div style="margin-top: 20px; padding: 15px; background: #f3f4f6; border-radius: 10px; text-align: center; color: var(--primary); font-weight: bold;">
+                    Online Form Temporarily Under Maintenance
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-logo">AMSLER FAMILY FOUNDATION</div>
-        <div class="footer-info">
-            <p>A registered non-profit organization dedicated to human welfare.</p>
-            <p>© 2026 Official Site. All Rights Reserved.</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Amsler Foundation</h4>
+                <p>A global nonprofit dedicated to education, health, and economic empowerment for all.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <li><a href="#history" style="color:inherit; text-decoration:none;">Our Story</a></li>
+                <li><a href="#values" style="color:inherit; text-decoration:none;">Our Values</a></li>
+                <li><a href="#programs" style="color:inherit; text-decoration:none;">Programs</a></li>
+                <li><a href="#legal" style="color:inherit; text-decoration:none;">Legal</a></li>
+            </div>
+            <div class="footer-col">
+                <h4>Registration</h4>
+                <p>EIN: 81-0854933</p>
+                <p>501(c)(3) Nonprofit Entity</p>
+                <p>Registered in Florida, USA</p>
+            </div>
         </div>
-        <div class="nav-links" style="display:block;">
-            <a href="#mission" style="color:#fff; margin:0 10px;">Mission</a>
-            <a href="#legal" style="color:#fff; margin:0 10px;">Privacy</a>
-            <a href="#contact" style="color:#fff; margin:0 10px;">Contact</a>
-        </div>
+        <p style="border-top: 1px solid #334155; padding-top: 30px;">© 2026 Amsler Family Foundation. All Rights Reserved. Built for a better world.</p>
     </footer>
 
 </body>
