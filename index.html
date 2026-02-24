@@ -1,246 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amsler Family Foundation | Official Nonprofit Organization</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsler Family Foundation | Official Nonprofit Organization</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5b5ff0;
+            --secondary: #4347d4;
+            --accent: #ff9800;
+            --text: #2d3436;
+            --light-bg: #f8faff;
+            --white: #ffffff;
+        }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f8fc;
-  color: #333;
-  line-height: 1.7;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
 
-header {
-  background: linear-gradient(135deg,#5b5ff0,#7b80ff);
-  color: white;
-  padding: 90px 20px;
-  text-align: center;
-}
+        html { scroll-behavior: smooth; }
 
-header h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
+        body {
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
 
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 70px 20px;
-}
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
 
-h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
+        .nav-links a:hover { color: var(--primary); }
 
-.card h3 {
-  color: #5b5ff0;
-  margin-bottom: 12px;
-}
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
 
-footer {
-  background: #1f1f1f;
-  color: #ccc;
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 14px;
-}
-</style>
+        header h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 20px; }
+        header p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; opacity: 0.9; }
+
+        .btn {
+            background: var(--accent);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255,152,0,0.4);
+        }
+
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255,152,0,0.6); }
+
+        /* Sections */
+        section { padding: 100px 5%; max-width: 1200px; margin: auto; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: 0.3s;
+            border-top: 5px solid var(--primary);
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        /* Privacy & Terms Section */
+        .legal-box {
+            background: #eef2ff;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: var(--primary);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .contact-card h3 { font-size: 2rem; margin-bottom: 20px; }
+        .contact-card p { margin-bottom: 10px; font-size: 1.1rem; }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #888;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        footer strong { color: white; display: block; margin-bottom: 10px; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            header { padding: 80px 20px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<header>
-  <div>
-    <svg width="70" height="70" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="48" fill="#ffffff"/>
-      <text x="50%" y="55%" text-anchor="middle" fill="#5b5ff0" font-size="28" font-weight="bold">AFF</text>
-    </svg>
-  </div>
-  <h1>Amsler Family Foundation</h1>
-  <p>
-    The official website of Amsler Family Foundation, a registered nonprofit organization
-    dedicated to strengthening communities through education, health initiatives,
-    inclusion, and charitable actions.
-  </p>
-</header>
+    <nav>
+        <a href="#" class="logo">
+            <div style="background:var(--primary); color:white; width:40px; height:40px; border-radius:10px; display:grid; place-items:center;">AFF</div>
+            AMSLER FOUNDATION
+        </a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#mission">Mission</a>
+            <a href="#legal">Privacy & Terms</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-<!-- ABOUT -->
-<section>
-<h2>About Us</h2>
-<p style="max-width:900px;margin:auto;text-align:center;">
-Amsler Family Foundation is a United States registered nonprofit organization committed
-to serving communities through programs that promote health, education, inclusion,
-and social responsibility. Our foundation works with individuals, families, and
-community partners to create positive and lasting social impact.
-</p>
-</section>
+    <header>
+        <h1>Dedicated to Social Change</h1>
+        <p>Amsler Family Foundation is a US-registered nonprofit organization committed to strengthening communities through education, health, and inclusion.</p>
+        <a href="#contact" class="btn">Get Involved</a>
+    </header>
 
-<!-- MISSION -->
-<section>
-<h2>Our Mission</h2>
-<div class="cards">
+    <section id="about">
+        <h2>About Our Organization</h2>
+        <p style="text-align:center; font-size:1.2rem; max-width:900px; margin:auto;">
+            The Amsler Family Foundation operates as a transparent and accountable nonprofit entity. Our goal is to create sustainable programs that empower youth, support families in need, and foster a culture of health and integrity.
+        </p>
+    </section>
 
-<div class="card">
-<h3>Health & Wellness</h3>
-<p>
-We promote physical and mental well-being through accessible health education,
-community wellness programs, and preventive care initiatives aimed at improving
-quality of life.
-</p>
-</div>
+    <section id="mission" style="background:#fff; max-width:100%;">
+        <div style="max-width:1200px; margin:auto;">
+            <h2>Our Core Pillars</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Education</h3>
+                    <p>Providing scholarships, learning materials, and mentorship programs to ensure every child has the tools to succeed academically.</p>
+                </div>
+                <div class="card">
+                    <h3>Health & Wellness</h3>
+                    <p>Organizing community health fairs and wellness workshops to promote physical and mental well-being for all ages.</p>
+                </div>
+                <div class="card">
+                    <h3>Social Inclusion</h3>
+                    <p>Advocating for equality and providing resources for marginalized groups to participate fully in community life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<h3>Education</h3>
-<p>
-We support educational development by providing learning resources, mentorship,
-and youth empowerment programs designed to encourage long-term academic and
-professional success.
-</p>
-</div>
-
-<div class="card">
-<h3>Inclusion</h3>
-<p>
-We foster inclusive communities by promoting equality, diversity, and participation
-across all social and economic backgrounds.
-</p>
-</div>
-
-<div class="card">
-<h3>Integrity</h3>
-<p>
-We operate with transparency, accountability, and ethical responsibility to ensure
-that all resources are used exclusively for nonprofit and charitable purposes.
-</p>
-</div>
-
-</div>
-</section>
-
-<!-- ACTIVITIES -->
-<section>
-<h2>Our Activities</h2>
-<div class="cards">
-
-<div class="card">
-<h3>Sports Programs</h3>
-<p>
-Community-based sports initiatives that promote teamwork, discipline, physical
-activity, and healthy lifestyles.
-</p>
-</div>
-
-<div class="card">
-<h3>Educational Support</h3>
-<p>
-Tutoring assistance, educational materials, and youth development programs designed
-to support academic growth.
-</p>
-</div>
-
-<div class="card">
-<h3>Community Outreach</h3>
-<p>
-Local outreach programs that provide social assistance, awareness campaigns, and
-volunteer-led initiatives.
-</p>
-</div>
-
-<div class="card">
-<h3>Charitable Actions</h3>
-<p>
-Humanitarian and charitable support for individuals and families facing hardship or
-financial challenges.
-</p>
-</div>
-
-</div>
-</section>
-
-<!-- DONATIONS -->
-<section>
-<h2>Donations</h2>
-<p style="max-width:850px;margin:auto;text-align:center;">
-Donations help support our nonprofit mission and allow us to continue providing
-community programs and charitable assistance. Donation options will be available
-through secure and transparent channels.
-</p>
-</section>
-
-<!-- PRIVACY POLICY -->
-<section>
-<h2>Privacy Policy</h2>
-<p>
-Amsler Family Foundation respects your privacy. This website does not collect personal
-information unless voluntarily provided through contact communications. Any
-information shared is used solely for nonprofit communication purposes and is never
-sold or shared with third parties.
-</p>
-</section>
-
-<!-- TERMS -->
-<section>
-<h2>Terms & Conditions</h2>
-<p>
-By using this website, you agree that all content is provided for informational
-purposes only. Amsler Family Foundation is not responsible for misuse of information.
-All content is protected and intended for nonprofit and educational use.
-</p>
-</section>
-
-<!-- CONTACT -->
-<section>
-<h2>Contact Us</h2>
-<div class="cards">
-
-<div class="card">
-<h3>Email</h3>
-<p>contact@amsler-family-foundation.sbs</p>
-</div>
-
-<div class="card">
-<h3>Address</h3>
-<p>
-7000 S Sylvan Lake Dr<br>
-Sanford, FL 32771-9050<br>
-United States
-</p>
-</div>
-
-<div class="card">
-<h3>EIN</h3>
-<p>81-0854933</p>
-</div>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<p>© 2026 Amsler Family Foundation</p>
-<p>Registered Nonprofit Organization – EIN 81-0854933</p>
-<p>Official website: amsler-family-foundation.sbs</p>
-</footer>
-
-</body>
-</html>
+    <section id="legal">
+        <h2>Legal Transparency</h2>
+        <div class="legal-box">
+            <h3>Privacy Policy</h3>
+            <p>Amsler Family Foundation (AFF) is committed to protecting your privacy. We do not collect personal data unless you contact us directly. Any information shared via email is used exclusively for foundation business and is never sold or shared with third parties.</p>
+            <br>
+            <h3>Terms of Service</h3>
+            <p>By using <strong>amsler-family-foundation.sbs</strong>, you agree to use the site for lawful purposes. All content, including text and logos, is the property of the foundation. We are a registered nonprofit under EIN 81-0854933.</p>
+            <br>
+            <h3>Nonprofit Status</h3>
+            <p>We
