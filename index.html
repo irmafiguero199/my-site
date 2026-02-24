@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amsler Family Foundation | Impact & Community</title>
+    <title>Amsler Family Foundation | Official Nonprofit Organization</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #4f46e5;
             --primary-dark: #3730a3;
             --accent: #f59e0b;
-            --bg-light: #f9fafb;
+            --bg-light: #f8fafc;
             --white: #ffffff;
-            --text-main: #1f2937;
-            --text-muted: #6b7280;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.8; }
 
         /* Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
@@ -37,133 +30,61 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            margin-left: 25px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 25px; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Hero Section */
+        /* Hero Section with Image Overlay */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(rgba(79, 70, 229, 0.85), rgba(55, 48, 163, 0.85)), 
+                        url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
             color: var(--white);
-            padding: 140px 5% 100px;
+            padding: 160px 5% 120px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        header::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            background: var(--bg-light);
-            clip-path: polygon(0 100%, 100% 100%, 100% 0);
-        }
+        header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 25px; font-weight: 800; }
+        header p { font-size: 1.3rem; max-width: 850px; margin: 0 auto 40px; opacity: 0.95; }
 
-        header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; line-height: 1.1; }
-        header p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 40px; opacity: 0.9; font-weight: 300; }
+        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { padding: 16px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .btn-accent { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); }
+        .btn-white { background: white; color: var(--primary); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
 
-        .btn-main {
-            background: var(--accent);
-            color: var(--white);
-            padding: 18px 45px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.4);
-        }
-
-        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.5); }
-
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 20px;
-        }
-
-        .stat-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-
-        .stat-card h3 { font-size: 2.5rem; color: var(--primary); margin-bottom: 5px; }
-        .stat-card p { color: var(--text-muted); font-weight: 500; }
-
-        /* General Section Styling */
-        section { padding: 100px 5%; max-width: 1200px; margin: auto; }
+        /* Sections */
+        section { padding: 80px 5%; max-width: 1200px; margin: auto; }
         .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
-        .section-title p { color: var(--text-muted); max-width: 600px; margin: auto; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .section-title h2 { font-size: 2.8rem; color: var(--primary); margin-bottom: 15px; }
         
-        .card {
-            background: var(--white);
-            padding: 45px;
-            border-radius: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
-            border: 1px solid #f1f5f9;
-            transition: 0.3s;
-        }
+        .content-with-img { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 60px; }
+        .content-with-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
-        .card:hover { transform: scale(1.02); border-color: var(--primary); }
-        .card h3 { margin-bottom: 15px; color: var(--text-main); font-size: 1.5rem; }
+        /* Extensive Mission Text */
+        .mission-text p { margin-bottom: 20px; font-size: 1.1rem; color: var(--text-muted); text-align: justify; }
 
-        /* Legal & Contact Boxes */
-        .legal-container { background: #fff; padding: 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+        /* Grid Layouts */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: 0.3s; }
+        .card:hover { border-top: 4px solid var(--accent); transform: translateY(-5px); }
+
+        /* Newsletter Section */
+        .newsletter { background: var(--primary); color: white; border-radius: 30px; padding: 60px; text-align: center; margin-top: 50px; }
+        .newsletter input { padding: 15px; border-radius: 10px; border: none; width: 300px; max-width: 100%; margin-bottom: 15px; }
 
         /* Footer */
-        footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 80px 5% 40px;
-            text-align: center;
-        }
-
-        .footer-logo { color: var(--white); font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; }
-        .footer-links { margin-bottom: 30px; }
-        .footer-links a { color: #94a3b8; margin: 0 15px; text-decoration: none; font-size: 0.9rem; }
-        .footer-links a:hover { color: var(--white); }
+        footer { background: #0f172a; color: #94a3b8; padding: 80px 5% 40px; text-align: center; }
+        .footer-logo { color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; }
+        .footer-info { margin-bottom: 30px; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
+            .content-with-img { grid-template-columns: 1fr; }
             .nav-links { display: none; }
-            .contact-grid { grid-template-columns: 1fr; }
-            header { padding-top: 100px; }
         }
     </style>
 </head>
@@ -171,117 +92,125 @@
 
     <nav>
         <a href="#" class="logo">
-            <div style="background:var(--primary); color:white; width:45px; height:45px; border-radius:12px; display:grid; place-items:center;">AFF</div>
+            <div style="background:var(--primary); color:white; width:40px; height:40px; border-radius:8px; display:grid; place-items:center;">AFF</div>
             AMSLER FOUNDATION
         </a>
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#mission">Programs</a>
+            <a href="#mission">Our Mission</a>
             <a href="#impact">Impact</a>
+            <a href="#volunteer">Volunteer</a>
             <a href="#legal">Legal</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header>
-        <h1>Building a Brighter Future Together</h1>
-        <p>Amsler Family Foundation is a non-profit dedicated to transforming lives through innovative education, quality healthcare, and community empowerment.</p>
-        <a href="#contact" class="btn-main">Become a Volunteer</a>
+        <h1>Kindness in Action, Hope for the Future</h1>
+        <p>Amsler Family Foundation is more than just a name. We are a community of volunteers and donors dedicated to breaking the cycle of poverty through sustainable education and health initiatives.</p>
+        <div class="btn-group">
+            <a href="#contact" class="btn btn-accent">Support Our Cause</a>
+            <a href="#mission" class="btn btn-white">Learn More</a>
+        </div>
     </header>
 
-    <div class="stats">
-        <div class="stat-card"><h3>500+</h3><p>Lives Impacted</p></div>
-        <div class="stat-card"><h3>15+</h3><p>Active Programs</p></div>
-        <div class="stat-card"><h3>100%</h3><p>Nonprofit Commitment</p></div>
-    </div>
-
-    <section id="about">
-        <div class="section-title">
-            <h2>Who We Are</h2>
-            <p>Transparency, Integrity, and Dedication are the values that drive our mission forward every single day.</p>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>Our Vision</h3>
-                <p>To create a world where every community has the resources, knowledge, and health support to thrive independently.</p>
+    <section id="mission">
+        <div class="content-with-img">
+            <div class="mission-text">
+                <h2 style="color:var(--primary); margin-bottom: 20px; font-size: 2.5rem;">Our Comprehensive Mission</h2>
+                <p>At Amsler Family Foundation, we believe that true change starts at the grassroots level. Our mission is built on the philosophy that every individual, regardless of their background, deserves the opportunity to lead a healthy, educated, and dignified life.</p>
+                <p>Over the past years, we have identified three critical gaps in community development: lack of mentorship for youth, inaccessible preventive healthcare, and the digital divide. Our programs are specifically designed to address these challenges head-on.</p>
+                <p>We don't just provide temporary aid; we build infrastructure. Whether it's setting up digital learning centers or hosting monthly wellness workshops, our goal is to empower people with the skills and health they need to become self-sufficient. We are committed to transparency, ensuring that every dollar spent is a step toward a stronger community.</p>
             </div>
-            <div class="card" style="background: var(--primary); color: white;">
-                <h3 style="color: white;">Our Values</h3>
-                <p>We believe in radical transparency. Every donation and every hour of volunteer work is tracked and used for the public good.</p>
+            <div>
+                <img src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Helping hand">
             </div>
         </div>
     </section>
 
-    <section id="mission" style="background: white; max-width: 100%;">
-        <div style="max-width: 1200px; margin: auto;">
+    <section id="impact" style="background: white; max-width: 100%;">
+        <div style="max-width: 1200px; margin: auto; padding: 0 5%;">
             <div class="section-title">
-                <h2>Our Key Programs</h2>
-                <p>We focus on three main pillars that guarantee long-term community success.</p>
+                <h2>Our Strategic Pillars</h2>
+                <p>We follow a data-driven approach to ensure our charitable actions have the maximum possible impact.</p>
             </div>
             <div class="grid">
                 <div class="card">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">🎓</div>
-                    <h3>Educational Equity</h3>
-                    <p>Providing modern tools, books, and mentorship to students in underserved areas to close the achievement gap.</p>
+                    <img src="https://images.pexels.com/photos/1739842/pexels-photo-1739842.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:20px;">
+                    <h3>Educational Mentorship</h3>
+                    <p>We provide long-term mentorship for students, connecting them with professionals who guide their academic and career choices. We believe a book can change a life, but a mentor can change a destiny.</p>
                 </div>
                 <div class="card">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">🏥</div>
-                    <h3>Healthcare Access</h3>
-                    <p>Facilitating community clinics and mental health workshops to ensure that wellness is not a luxury.</p>
+                    <img src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:20px;">
+                    <h3>Wellness & Prevention</h3>
+                    <p>Our healthcare initiative focuses on preventive care. By educating families on nutrition, mental health, and regular screenings, we reduce the long-term burden of disease in our community.</p>
                 </div>
                 <div class="card">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">🤝</div>
-                    <h3>Community Inclusion</h3>
-                    <p>Supporting local leaders and diversity initiatives to build more inclusive and resilient neighborhoods.</p>
+                    <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:20px;">
+                    <h3>Community Resilience</h3>
+                    <p>We support local leaders and grassroots organizations by providing the training and resources they need to manage local challenges effectively and inclusively.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="volunteer">
+        <div class="newsletter">
+            <h2 style="color:white; margin-bottom:20px;">Join the Amsler Family Today</h2>
+            <p style="margin-bottom: 30px; opacity:0.9;">Want to stay updated on our activities or join our volunteer network? Enter your email below.</p>
+            <input type="email" placeholder="Your Email Address">
+            <br>
+            <a href="#contact" class="btn btn-accent" style="display:inline-block;">Register as Volunteer</a>
         </div>
     </section>
 
     <section id="legal">
         <div class="section-title">
-            <h2>Legal & Transparency</h2>
+            <h2>Legal Framework & Privacy</h2>
         </div>
-        <div class="legal-container">
-            <div class="grid">
-                <div>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">Privacy Policy</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Your privacy is our priority. We only collect data voluntarily provided by you. We strictly follow data protection laws and never share your info with third-party advertisers.</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">Terms of Use</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">All materials on this site are for informational purposes. As a registered 501(c)(3) entity (EIN 81-0854933), we ensure all resources are used for charitable causes.</p>
-                </div>
+        <div class="grid">
+            <div class="card" style="border-top: 2px solid #ddd;">
+                <h4>Privacy Policy</h4>
+                <p style="font-size:0.9rem; color:var(--text-muted); margin-top:10px;">Amsler Family Foundation (AFF) respects your data. We only collect information voluntarily provided via contact forms or email for communication regarding our nonprofit activities. Your data is never sold or traded.</p>
+            </div>
+            <div class="card" style="border-top: 2px solid #ddd;">
+                <h4>Terms of Service</h4>
+                <p style="font-size:0.9rem; color:var(--text-muted); margin-top:10px;">By browsing this site, you agree to our terms. All content is for educational and informational purposes. AFF is a registered 501(c)(3) organization with EIN 81-0854933.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <div class="contact-grid">
-            <div>
-                <h2 style="text-align: left; margin-bottom: 20px;">Contact Us</h2>
-                <p style="margin-bottom: 30px; color: var(--text-muted);">Have questions about our mission or want to partner with us? Reach out today.</p>
-                <p><strong>📍 Address:</strong> 7000 S Sylvan Lake Dr, Sanford, FL 32771</p>
-                <p><strong>📧 Email:</strong> contact@amsler-family-foundation.sbs</p>
-                <p><strong>🆔 Tax ID:</strong> EIN 81-0854933</p>
+        <div class="section-title">
+            <h2>Contact Our Team</h2>
+            <p>We are based in Florida, USA, and operate internationally.</p>
+        </div>
+        <div class="grid">
+            <div style="padding:20px;">
+                <h3 style="margin-bottom:15px; color:var(--primary);">Headquarters</h3>
+                <p>7000 S Sylvan Lake Dr<br>Sanford, FL 32771-9050<br>United States</p>
+                <p style="margin-top:20px;"><strong>Email:</strong> contact@amsler-family-foundation.sbs</p>
+                <p><strong>EIN:</strong> 81-0854933</p>
             </div>
-            <div class="card" style="background: #f1f5f9; padding: 30px;">
-                <p style="font-style: italic; color: var(--primary-dark);">"Supporting the Amsler Family Foundation means investing in the future of our youth and the health of our communities."</p>
-                <p style="margin-top: 15px; font-weight: bold;">— Board of Directors</p>
+            <div style="padding:20px;">
+                <h3 style="margin-bottom:15px; color:var(--primary);">Hours of Operation</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 2:00 PM</p>
+                <p>Sunday: Closed</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-logo">AMSLER FAMILY FOUNDATION</div>
-        <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#mission">Programs</a>
-            <a href="#legal">Legal</a>
-            <a href="#contact">Contact</a>
+        <div class="footer-info">
+            <p>A registered non-profit organization dedicated to human welfare.</p>
+            <p>© 2026 Official Site. All Rights Reserved.</p>
         </div>
-        <p>© 2026 Amsler Family Foundation. Registered Nonprofit Organization.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Dedicated to service and social responsibility.</p>
+        <div class="nav-links" style="display:block;">
+            <a href="#mission" style="color:#fff; margin:0 10px;">Mission</a>
+            <a href="#legal" style="color:#fff; margin:0 10px;">Privacy</a>
+            <a href="#contact" style="color:#fff; margin:0 10px;">Contact</a>
+        </div>
     </footer>
 
 </body>
